@@ -9,58 +9,99 @@
     <script src="index.js"></script>
     <!--AWESOME FONT CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!--AWESOME FONT CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
 </head>
 <body>
-   <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<div class="topnav" id="myTopnav">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+      <div class="topnav" id="myTopnav">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</a>
 
-<div class="bgimg-1">
-    <div class="caption">
-    <span class="border">WELCOME</span>
-    </div>
-  </div>
-  
-  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-    <h3 style="text-align:center;">YOUR INVITED</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint veniam animi quam iste! Facilis sed eum, aut modi eius ex maxime sit soluta. Unde sit sequi nemo, ipsum dignissimos repellendus, quidem placeat quasi repudiandae vitae dolorum repellat tempore neque temporibus quisquam quia commodi harum aut. Adipisci enim recusandae eum similique sed quisquam beatae sapiente expedita corrupti quasi, ex ipsum a eos nostrum incidunt pariatur? Veniam, cumque eveniet quod asperiores, nam aspernatur libero doloribus, voluptates soluta quae non dolorem ipsum aliquam laborum commodi? Excepturi, possimus quas architecto doloremque totam ratione? Maxime dolore delectus totam odit obcaecati voluptates consequuntur sequi nam?</p>
-  </div>
-  
-  <div class="bgimg-2">
-    <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">KEEP SCROLLING</span>
-    </div>
-  </div>
-  
-  <div style="position:relative;">
-    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui itaque nesciunt eaque? Reiciendis, temporibus veritatis? Quisquam quidem neque suscipit officiis.</p>
-    </div>
-  </div>
-  
-  <div class="bgimg-3">
-    <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">KEEP SCROLLING</span>
-    </div>
-  </div>
-  
-  <div style="position:relative;">
-    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, alias.</p>
-    </div>
-  </div>
-  
-  <div class="bgimg-1">
-    <div class="caption">
-    <span class="border">THANK YOU</span>
-    </div>
-  </div>
+        <div id="id01" class="modal">
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              LOGIN
+            </div>
+
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+            <div class="container" style="background-color:rgba(0, 0, 0, 0.938)">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn animate__animated animate__bounce">Cancel</button> <a href="mailto: justineonu41@gmail.com"></a>FORGOT PASSWORD</a>
+            </div>
+          </form>
+        </div>
+        <script>
+          // Get the modal
+          var modal = document.getElementById('id01');
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+        </script>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <div class="bgimg-1">
+          <div class="caption">
+          <span class="border">WELCOME</span>
+          </div>
+        </div>
+        
+        <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+          <h3 style="text-align:center;">YOUR INVITED</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint veniam animi quam iste! Facilis sed eum, aut modi eius ex maxime sit soluta. Unde sit sequi nemo, ipsum dignissimos repellendus, quidem placeat quasi repudiandae vitae dolorum repellat tempore neque temporibus quisquam quia commodi harum aut. Adipisci enim recusandae eum similique sed quisquam beatae sapiente expedita corrupti quasi, ex ipsum a eos nostrum incidunt pariatur? Veniam, cumque eveniet quod asperiores, nam aspernatur libero doloribus, voluptates soluta quae non dolorem ipsum aliquam laborum commodi? Excepturi, possimus quas architecto doloremque totam ratione? Maxime dolore delectus totam odit obcaecati voluptates consequuntur sequi nam?</p>
+        </div>
+        
+        <div class="bgimg-2">
+          <div class="caption">
+          <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">KEEP SCROLLING</span>
+          </div>
+        </div>
+        
+        <div style="position:relative;">
+          <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui itaque nesciunt eaque? Reiciendis, temporibus veritatis? Quisquam quidem neque suscipit officiis.</p>
+          </div>
+        </div>
+        
+        <div class="bgimg-3">
+          <div class="caption">
+          <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">KEEP SCROLLING</span>
+          </div>
+        </div>
+        
+        <div style="position:relative;">
+          <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, alias.</p>
+          </div>
+        </div>
+        
+        <div class="bgimg-1">
+          <div class="caption">
+          <span class="border">THANK YOU</span>
+          </div>
+      </div>
 </body>
 </html>
